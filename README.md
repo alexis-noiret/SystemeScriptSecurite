@@ -1,5 +1,11 @@
 # 🧰 Système, Scripts et Sécurité
 
+![Bash](https://img.shields.io/badge/Language-Bash-black)
+![Python](https://img.shields.io/badge/Language-Python-blue)
+![Debian](https://img.shields.io/badge/OS-Debian-A81D33)
+![Team](https://img.shields.io/badge/Team-Bin%C3%B4me-orange)
+![Cybersecurity](https://img.shields.io/badge/Focus-Cybersecurity-red)
+
 > Un voyage à travers les commandes, scripts et interactions avancées — La Plateforme
 
 ---
