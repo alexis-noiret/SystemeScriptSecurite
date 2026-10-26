@@ -56,7 +56,7 @@ SystemeScriptSecurite/
 └── README.md
 ```
 
-> ℹ️ Les sources d'origine des scripts n'ont pas été conservées : ils ont été **reconstitués à partir de la documentation de `revision_systeme.pdf`**, puis testés.
+> ℹ️ Projet réalisé en binôme (Gabin & Alexis). Les sources d'origine des scripts n'ont pas été conservées dans ce dépôt : ils ont été **reconstitués à partir de la documentation de `revision_systeme.pdf`**, puis testés.
 
 ---
 
@@ -116,8 +116,10 @@ sudo ./scripts/install_deps.sh   # Apache, phpMyAdmin, MariaDB, Node.js, npm, Gi
 
 ---
 
-## 👤 Auteur
+## 👤 Auteurs
 
-**Alexis Noiret**  
-Bachelor IT Cybersécurité — La Plateforme  
-[github.com/alexis-noiret](https://github.com/alexis-noiret)
+Projet réalisé **en binôme** dans le cadre du Bachelor IT Cybersécurité — La Plateforme (mai 2026).
+
+- **Gabin** — co-auteur du projet et du document `revision_systeme.pdf`
+- **Alexis Noiret** — co-auteur, mainteneur de ce dépôt  
+  [github.com/alexis-noiret](https://github.com/alexis-noiret)
