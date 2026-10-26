@@ -45,42 +45,56 @@ Le rendu principal est le fichier **`revision_systeme.pdf`** qui documente chaqu
 
 ```
 SystemeScriptSecurite/
-├── revision_systeme.pdf       # Document de rendu principal
+├── revision_systeme.pdf       # Document de rendu principal (20 pages)
 ├── scripts/
-│   ├── create_csv.py          # Script Python — création du fichier CSV
-│   ├── backup.sh              # Script Shell — sauvegarde automatique
-│   ├── update.sh              # Script Shell — mises à jour logicielles
-│   ├── install_deps.sh        # Script Shell — installation dépendances web
-│   └── api_request.sh         # Script Shell — appel API Web sécurisé
+│   ├── create_csv.py          # Python — création de personnes.csv
+│   ├── surveillance.sh        # Shell — collecte périodique CPU / mémoire vers ressources.csv
+│   ├── sauvegarde.sh          # Shell — sauvegarde automatique, historique et rotation
+│   ├── mises_a_jour.sh        # Shell — mise à jour interactive du système
+│   ├── install_deps.sh        # Shell — installation d'une stack web
+│   └── api_meteo.sh           # Shell — appel API Open-Meteo, journalisation, gestion d'erreurs
 └── README.md
 ```
+
+> ℹ️ Les sources d'origine des scripts n'ont pas été conservées : ils ont été **reconstitués à partir de la documentation de `revision_systeme.pdf`**, puis testés.
 
 ---
 
 ## 🚀 Utilisation
 
+Se placer dans le dossier du dépôt, puis lancer les scripts depuis `scripts/`.
+
+### Création du CSV et extraction avec awk
+```bash
+python3 scripts/create_csv.py
+awk -F',' 'NR>1 {print $3}' personnes.csv      # affiche les villes
+```
+
+### Surveillance des ressources
+```bash
+./scripts/surveillance.sh      # 5 mesures, une toutes les 2 s, écrites dans ressources.csv
+```
+
 ### Sauvegarde automatique
 ```bash
-chmod +x scripts/backup.sh
-./scripts/backup.sh
+./scripts/sauvegarde.sh                  # sauvegarde ~/Documents/Plateforme
+./scripts/sauvegarde.sh /chemin/dossier  # ou un autre dossier
 ```
+Les archives sont créées dans `~/sauvegardes/` (horodatées), le résultat est ajouté à `historique.log`, et seules les **5 dernières** sauvegardes sont conservées.
 
 ### Mises à jour logicielles
 ```bash
-chmod +x scripts/update.sh
-./scripts/update.sh
+./scripts/mises_a_jour.sh      # demande confirmation avant d'installer (o/n)
 ```
 
 ### Installation des dépendances web
 ```bash
-chmod +x scripts/install_deps.sh
-sudo ./scripts/install_deps.sh
+sudo ./scripts/install_deps.sh   # Apache, phpMyAdmin, MariaDB, Node.js, npm, Git ; journal : install.log
 ```
 
-### Appel API Web
+### Appel API Web (Open-Meteo)
 ```bash
-chmod +x scripts/api_request.sh
-./scripts/api_request.sh
+./scripts/api_meteo.sh           # température actuelle à Paris ; requêtes et réponses dans api.log
 ```
 
 ---
