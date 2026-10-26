@@ -1,10 +1,10 @@
-# Système, Scripts et Sécurité
+# 🧰 Système, Scripts et Sécurité
 
 > Un voyage à travers les commandes, scripts et interactions avancées — La Plateforme
 
 ---
 
-## 📋 Présentation du projet
+## 📋 Présentation
 
 Ce projet a été réalisé dans le cadre de la formation **Bachelor IT Cybersécurité** à **La Plateforme**.  
 Il regroupe l'ensemble des exercices pratiques autour de l'administration système Linux, du scripting Shell et Python, ainsi que de la sécurisation des scripts et des interactions avec des API Web.
@@ -41,7 +41,7 @@ Le rendu principal est le fichier **`revision_systeme.pdf`** qui documente chaqu
 
 ---
 
-## 📁 Structure du repo
+## 📁 Structure du dépôt
 
 ```
 SystemeScriptSecurite/
@@ -85,7 +85,16 @@ chmod +x scripts/api_request.sh
 
 ---
 
-## 🎯 Compétences visées
+## 🧠 Compétences démontrées
+
+- **Administration Linux (Debian)** : installation d'une VM, gestion des processus (arrêt normal et forcé), surveillance CPU / mémoire en temps réel avec export CSV.
+- **Ligne de commande** : recherche avancée (`find`, `grep`), archivage (`tar`, `gzip`), traitement de texte (`awk`).
+- **Scripting Shell et Python** : sauvegarde automatique avec historique, détection et installation des mises à jour, installation d'une stack web complète, génération d'un fichier CSV.
+- **Sécurisation des scripts** : identification des risques et durcissement des scripts développés.
+- **API Web** : script Shell consommant une API avec gestion des erreurs et journalisation.
+- **Documentation** : rendu détaillé dans `revision_systeme.pdf`.
+
+### 🎯 Compétences du référentiel visées
 
 - Administrer et sécuriser les infrastructures systèmes
 - Mettre en œuvre et optimiser la supervision des infrastructures
